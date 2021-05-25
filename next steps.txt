@@ -5,3 +5,22 @@ next steps
 3. stylesheet 
 4. basic diagramme erstellen mit highcharts (Pie, line, ...)
 5. nächstes Meeting :) 
+
+
+
+
+
+Struktur Vortrag über HighCharts:
+1. Overview: Was sind HighCharts? Wofür werden sie verwendet?
+2. HighCharts einbinden:  https://www.highcharts.com/docs/getting-started/installation
+3. Das erste HighChart erstellen: https://www.highcharts.com/docs/getting-started/your-first-chart?_ga=2.11476465.453075315.1621962033-1375444314.1621962033
+
+
+- Common charting features
+- Tooltips, Labels and String Formatting
+- Line, Scatter & Bubble HighCharts
+- Importing Data -> working with (different types of) data
+- Making Graphs zoomable
+- Exporting Images in Different Formats
+
+-> Inspiration: https://www.youtube.com/watch?v=xiirp5sY3Ww&list=PLTgRMOcmRb3Nya4u6drPdn95ZKY_P9g4x&index=3
