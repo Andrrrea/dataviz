@@ -1,4 +1,93 @@
-document.addEventListener('DOMContentLoaded', function () {
+// AJAX Einladen der JSON Datei – clientside 
+
+/* 
+window.onload = AJAX_Creditoren;
+
+function AJAX_Creditoren()
+{
+  var req = new XMLHttpRequest();
+
+  req.onreadystatechange = function ()
+  {
+    if (req.readyState == 4)
+    {
+      if (req.status == 200 || req.status == 0)
+      {
+        var res = req.responseText;
+        var jsonobj = JSON.parse(res);
+        if(jsonobj)Verarbeiten(jsonobj);
+      }
+      else alert("Fehler bei dem Request der Datei  " + req.statusText);
+    }
+  }
+
+  req.open("GET", "./CRE_Daten.json", true);
+  req.send();
+}
+ */
+ 
+ 
+// JSON-Daten verarbeiten
+/*  
+function Verarbeiten(jsonobj)
+{
+  var kreditorenJSON = jsonobj.CRE_Daten;
+  var kreditoren = kreditorenJSON.kreditoren; 
+ // alert(kreditoren);
+  var CRE1_vorname = kreditoren[0].Vorname;
+  alert(CRE1_vorname);
+}
+*/
+
+//JSON für Highcharts einlesen
+
+$(function transformJSON ()
+{
+                var processed_json = new Array();   
+                $.getJSON("./CRE_Daten.json", function(json) 
+                {
+                   console.log(json);
+                   for (i = 0; i < json.kreditoren.length; i++){
+                        processed_json.push([json.kreditoren[i].Postleitzahl, json.kreditoren[i].Postleitzahl]);
+                    }
+                 console.log(processed_json); 
+                    // draw chart
+                    $('#container4').highcharts({
+                    chart: {
+                        type: "column"
+                    },
+                    title: {
+                        text: "Kreditoren"
+                    },
+                    xAxis: {
+                        type: 'category',
+                        allowDecimals: false,
+                        title: {
+                            text: ""
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: "Anzahl"
+                        }
+                    },
+                    series: [{
+	                    name: 'Name gefüllt',
+                        data: [90, 10],
+                        stack: 'yes'
+                    },
+                    {
+	                    name: 'Name nicht gefüllt',
+                        data: [90, 10],
+                        stack: 'yes'
+                    }]
+                }); 
+            });
+        })
+/////
+
+/*  document.addEventListener('DOMContentLoaded', function () {
+*/
 
 // Erstes Chart erstellen
 // Möglichkeit 1
@@ -28,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }); */
 
 //Möglichkeit 2
-var options = {
+
+/* var options = {
     chart: {
         renderTo: 'container',
         type: 'bar'
@@ -100,3 +190,4 @@ var chart2 = new Highcharts.Chart({
 
 
 }); 
+*/
