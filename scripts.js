@@ -1,47 +1,56 @@
 // AJAX Einladen der JSON Datei – clientside 
 
-/* 
-window.onload = AJAX_Creditoren;
+//JSON für Highcharts einlesen V1
 
-function AJAX_Creditoren()
-{
-  var req = new XMLHttpRequest();
-
-  req.onreadystatechange = function ()
-  {
-    if (req.readyState == 4)
-    {
-      if (req.status == 200 || req.status == 0)
-      {
-        var res = req.responseText;
-        var jsonobj = JSON.parse(res);
-        if(jsonobj)Verarbeiten(jsonobj);
-      }
-      else alert("Fehler bei dem Request der Datei  " + req.statusText);
-    }
-  }
-
-  req.open("GET", "./CRE_Daten.json", true);
-  req.send();
-}
+/* document.addEventListener('DOMContentLoaded', function () {
+    var options = {
+        chart: {
+            type: 'spline'
+        },
+        series: [{}]
+    };
+    Highcharts.ajax({  
+        url: './CRE_Daten.json',  
+        success: function(json) {
+            options.series[0].json = processed_json;
+                $('#container4').highcharts({                    
+                   chart: {
+                        type: "column"
+                    },
+                    title: {
+                        text: "Kreditoren"
+                    },
+                    xAxis: {
+                        type: 'category',
+                        allowDecimals: false,
+                        title: {
+                            text: ""
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: "Anzahl"
+                        }
+                    },
+                    series: [{
+	                    name: 'Name gefüllt',
+                        data: [90, 10],
+                        stack: 'yes'
+                    },
+                    {
+	                    name: 'Name nicht gefüllt',
+                        data: [90, 10],
+                        stack: 'yes'
+                    }]
+                });
+        }  
+    });
+});
  */
- 
- 
-// JSON-Daten verarbeiten
-/*  
-function Verarbeiten(jsonobj)
-{
-  var kreditorenJSON = jsonobj.CRE_Daten;
-  var kreditoren = kreditorenJSON.kreditoren; 
- // alert(kreditoren);
-  var CRE1_vorname = kreditoren[0].Vorname;
-  alert(CRE1_vorname);
-}
-*/
 
-//JSON für Highcharts einlesen
+//JSON für Highcharts einlesen V2 
 
-$(function transformJSON ()
+  $(function transformJSON ()
 {
                 var processed_json = new Array();   
                 $.getJSON("./CRE_Daten.json", function(json) 
@@ -84,7 +93,8 @@ $(function transformJSON ()
                 }); 
             });
         })
-/////
+          
+/////Erste Schritte mit Highcharts ohne JSON 
 
 /*  document.addEventListener('DOMContentLoaded', function () {
 */
