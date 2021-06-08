@@ -6,7 +6,15 @@ next steps
 4. basic diagramme erstellen mit highcharts (Pie, line, ...)
 5. nächstes Meeting :) 
 
-
+Kriterien: 
+a) "Aktiv seit": Timeline 
+    für die Auswertung: Datenformat harmonisieren von "Aktiv seit" 
+b) Wenn "Newsletter": 'ja': muss "Email" gepflegt sein 
+c) Wie viele Männer/Frauen haben den Newsletter abonniert?
+d) "Postleitzahl gefüllt"?: stacked chart 
+e) "ID vergeben"?: weiteres Diagramm 
+f) Datensatz ist unique: 
+g) Wo sind die meisten Kunden? Nach Stadt und nach Bundesland: MAP 
 
 
 

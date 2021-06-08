@@ -1,54 +1,4 @@
-// AJAX Einladen der JSON Datei – clientside 
-
-//JSON für Highcharts einlesen V1
-
-/* document.addEventListener('DOMContentLoaded', function () {
-    var options = {
-        chart: {
-            type: 'spline'
-        },
-        series: [{}]
-    };
-    Highcharts.ajax({  
-        url: './CRE_Daten.json',  
-        success: function(json) {
-            options.series[0].json = processed_json;
-                $('#container4').highcharts({                    
-                   chart: {
-                        type: "column"
-                    },
-                    title: {
-                        text: "Kreditoren"
-                    },
-                    xAxis: {
-                        type: 'category',
-                        allowDecimals: false,
-                        title: {
-                            text: ""
-                        }
-                    },
-                    yAxis: {
-                        title: {
-                            text: "Anzahl"
-                        }
-                    },
-                    series: [{
-	                    name: 'Name gefüllt',
-                        data: [90, 10],
-                        stack: 'yes'
-                    },
-                    {
-	                    name: 'Name nicht gefüllt',
-                        data: [90, 10],
-                        stack: 'yes'
-                    }]
-                });
-        }  
-    });
-});
- */
-
-//JSON für Highcharts einlesen V2 
+// JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside 
 
   $(function transformJSON ()
 {
@@ -60,7 +10,7 @@
                         processed_json.push([json.kreditoren[i].Postleitzahl, json.kreditoren[i].Postleitzahl]);
                     }
                  console.log(processed_json); 
-                    // draw chart
+                    // draw chart – mit fixen Daten, hier fehlen noch die JSON Daten für die Diagramme
                     $('#container4').highcharts({
                     chart: {
                         type: "column"
@@ -93,6 +43,8 @@
                 }); 
             });
         })
+          
+          
           
 /////Erste Schritte mit Highcharts ohne JSON 
 
