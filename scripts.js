@@ -1,6 +1,6 @@
 // JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside 
 
-  $(function transformJSON ()
+$(function transformJSON ()
 {
                 var processed_json = new Array();   
                 $.getJSON("./CRE_Daten.json", function(json) 
@@ -44,12 +44,11 @@
             });
         })
           
-          
+
           
 /////Erste Schritte mit Highcharts ohne JSON 
 
-/*  document.addEventListener('DOMContentLoaded', function () {
-*/
+document.addEventListener('DOMContentLoaded', function () {
 
 // Erstes Chart erstellen
 // Möglichkeit 1
