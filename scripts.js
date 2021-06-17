@@ -1,5 +1,6 @@
 // JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside 
 
+/*
 $(function transformJSON ()
 {
                 var processed_json = new Array();   
@@ -43,7 +44,7 @@ $(function transformJSON ()
                 }); 
             });
         })
-          
+*/           
 
           
 /////Erste Schritte mit Highcharts ohne JSON 
@@ -52,8 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Erstes Chart erstellen
 // Möglichkeit 1
-/*
-    const chart = Highcharts.chart('container', {
+
+    const chart = Highcharts.chart('my_container', {
         chart: {
             type: 'bar'
         },
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: 'John',
             data: [5, 7, 3]
         }]
-    }); */
+    }); 
 
 //Möglichkeit 2
 
