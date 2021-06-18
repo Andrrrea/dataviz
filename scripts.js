@@ -153,3 +153,4 @@ var chart2 = new Highcharts.Chart({
 
 }); 
 */
+})
