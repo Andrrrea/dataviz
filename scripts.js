@@ -1,6 +1,5 @@
 // JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside 
 
-
 $(function transformJSON ()
 {
                 var processed_json = new Array();   
@@ -44,11 +43,17 @@ $(function transformJSON ()
                 }); 
             });
         })
+<<<<<<< Updated upstream
           
 
           
 /////Erste Schritte mit Highcharts ohne JSON 
 
+=======
+
+          
+/////Erste Schritte mit Highcharts ohne JSON 
+>>>>>>> Stashed changes
 /*
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -154,4 +159,8 @@ var chart2 = new Highcharts.Chart({
 
 
 }); 
+<<<<<<< Updated upstream
 */
+=======
+*/
+>>>>>>> Stashed changes
