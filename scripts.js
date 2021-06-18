@@ -43,17 +43,9 @@ $(function transformJSON ()
                 }); 
             });
         })
-<<<<<<< Updated upstream
-          
 
-          
 /////Erste Schritte mit Highcharts ohne JSON 
 
-=======
-
-          
-/////Erste Schritte mit Highcharts ohne JSON 
->>>>>>> Stashed changes
 /*
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -161,6 +153,3 @@ var chart2 = new Highcharts.Chart({
 }); 
 <<<<<<< Updated upstream
 */
-=======
-*/
->>>>>>> Stashed changes
