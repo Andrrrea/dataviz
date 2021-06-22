@@ -1,11 +1,29 @@
-// JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside 
+// JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside !FUNKTIONIERT!
 
+window.onload = AJAX_CRE_Daten;
+
+function AJAX_CRE_Daten() {
+    var req = new XMLHttpRequest();
+
+    req.onreadystatechange = function () {
+        if (req.readyState == 4) {
+            if (req.status == 200 || req.status == 0) {
+                var res = req.responseText;
+                var jsonobj = JSON.parse(res);
+            } else alert("Fehler: !!!!!!!!!!!!!!!!!! " + req.statusText);
+        }
+    }
+
+    req.open("GET", "CRE_Daten.json", true);
+    req.send();
+}
+
+/*
 $(function transformJSON ()
 {
                 var processed_json = new Array();   
                 $.getJSON("./CRE_Daten.json", function(json) 
                 {
-                   console.log(json);
                    for (i = 0; i < json.kreditoren.length; i++){
                         processed_json.push([json.kreditoren[i].Postleitzahl, json.kreditoren[i].Postleitzahl]);
                     }
@@ -151,5 +169,5 @@ var chart2 = new Highcharts.Chart({
 
 
 }); 
-<<<<<<< Updated upstream
 */
+
