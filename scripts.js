@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 40658ce (dataset changed (Dataformat) and json embedded)
 // JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside 
 
 $(function transformJSON ()
@@ -153,6 +156,7 @@ var chart2 = new Highcharts.Chart({
 
 }); 
 <<<<<<< HEAD
+<<<<<<< HEAD
 */
 
 
@@ -222,6 +226,9 @@ $(function transformJSON ()
                 }); 
             });
         })
+=======
+<<<<<<< Updated upstream
+>>>>>>> parent of 40658ce (dataset changed (Dataformat) and json embedded)
 =======
 <<<<<<< Updated upstream
 >>>>>>> parent of 40658ce (dataset changed (Dataformat) and json embedded)
