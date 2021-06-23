@@ -1,3 +1,52 @@
+<<<<<<< HEAD
+=======
+// JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside 
+
+$(function transformJSON ()
+{
+                var processed_json = new Array();   
+                $.getJSON("./CRE_Daten.json", function(json) 
+                {
+                   console.log(json);
+                   for (i = 0; i < json.kreditoren.length; i++){
+                        processed_json.push([json.kreditoren[i].Postleitzahl, json.kreditoren[i].Postleitzahl]);
+                    }
+                 console.log(processed_json); 
+                    // draw chart – mit fixen Daten, hier fehlen noch die JSON Daten für die Diagramme
+                    $('#container4').highcharts({
+                    chart: {
+                        type: "column"
+                    },
+                    title: {
+                        text: "Kreditoren"
+                    },
+                    xAxis: {
+                        type: 'category',
+                        allowDecimals: false,
+                        title: {
+                            text: ""
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: "Anzahl"
+                        }
+                    },
+                    series: [{
+	                    name: 'Name gefüllt',
+                        data: [90, 10],
+                        stack: 'yes'
+                    },
+                    {
+	                    name: 'Name nicht gefüllt',
+                        data: [90, 10],
+                        stack: 'yes'
+                    }]
+                }); 
+            });
+        })
+
+>>>>>>> parent of 40658ce (dataset changed (Dataformat) and json embedded)
 /////Erste Schritte mit Highcharts ohne JSON 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -103,6 +152,7 @@ var chart2 = new Highcharts.Chart({
 
 
 }); 
+<<<<<<< HEAD
 */
 
 
@@ -172,4 +222,7 @@ $(function transformJSON ()
                 }); 
             });
         })
+=======
+<<<<<<< Updated upstream
+>>>>>>> parent of 40658ce (dataset changed (Dataformat) and json embedded)
 */
