@@ -1,76 +1,10 @@
-// JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside !FUNKTIONIERT!
-
-window.onload = AJAX_CRE_Daten;
-
-function AJAX_CRE_Daten() {
-    var req = new XMLHttpRequest();
-
-    req.onreadystatechange = function () {
-        if (req.readyState == 4) {
-            if (req.status == 200 || req.status == 0) {
-                var res = req.responseText;
-                var jsonobj = JSON.parse(res);
-            } else alert("Fehler: !!!!!!!!!!!!!!!!!! " + req.statusText);
-        }
-    }
-
-    req.open("GET", "CRE_Daten.json", true);
-    req.send();
-}
-
-/*
-$(function transformJSON ()
-{
-                var processed_json = new Array();   
-                $.getJSON("./CRE_Daten.json", function(json) 
-                {
-                   for (i = 0; i < json.kreditoren.length; i++){
-                        processed_json.push([json.kreditoren[i].Postleitzahl, json.kreditoren[i].Postleitzahl]);
-                    }
-                 console.log(processed_json); 
-                    // draw chart – mit fixen Daten, hier fehlen noch die JSON Daten für die Diagramme
-                    $('#container4').highcharts({
-                    chart: {
-                        type: "column"
-                    },
-                    title: {
-                        text: "Kreditoren"
-                    },
-                    xAxis: {
-                        type: 'category',
-                        allowDecimals: false,
-                        title: {
-                            text: ""
-                        }
-                    },
-                    yAxis: {
-                        title: {
-                            text: "Anzahl"
-                        }
-                    },
-                    series: [{
-	                    name: 'Name gefüllt',
-                        data: [90, 10],
-                        stack: 'yes'
-                    },
-                    {
-	                    name: 'Name nicht gefüllt',
-                        data: [90, 10],
-                        stack: 'yes'
-                    }]
-                }); 
-            });
-        })
-
 /////Erste Schritte mit Highcharts ohne JSON 
 
-/*
 document.addEventListener('DOMContentLoaded', function () {
 
-// Erstes Chart erstellen
 // Möglichkeit 1
 
-    const chart = Highcharts.chart('my_container', {
+    const chart = Highcharts.chart('container_1', {
         chart: {
             type: 'bar'
         },
@@ -93,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
             data: [5, 7, 3]
         }]
     }); 
+}),
 
-    */
 //Möglichkeit 2
 
 /* var options = {
@@ -171,3 +105,71 @@ var chart2 = new Highcharts.Chart({
 }); 
 */
 
+
+
+// JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside !FUNKTIONIERT!
+window.onload = AJAX_CRE_Daten;
+
+function AJAX_CRE_Daten() {
+    var req = new XMLHttpRequest();
+
+    req.onreadystatechange = function () {
+        if (req.readyState == 4) {
+            if (req.status == 200 || req.status == 0) {
+                var res = req.responseText;
+                var jsonobj = JSON.parse(res);
+            } else alert("Fehler: !!!!!!!!!!!!!!!!!! " + req.statusText);
+        }
+    }
+
+    req.open("GET", "CRE_Daten.json", true);
+    req.send();
+}
+
+
+//JSON für Highcharts einlesen
+/*
+$(function transformJSON ()
+{
+                var processed_json = new Array();   
+                $.getJSON("./CRE_Daten.json", function(json) 
+                {
+                   console.log(json);
+                   for (i = 0; i < json.kreditoren.length; i++){
+                        processed_json.push([json.kreditoren[i].Postleitzahl, json.kreditoren[i].Postleitzahl]);
+                    }
+                 console.log(processed_json); 
+                    // draw chart
+                    $('#container4').highcharts({
+                    chart: {
+                        type: "column"
+                    },
+                    title: {
+                        text: "Kreditoren"
+                    },
+                    xAxis: {
+                        type: 'category',
+                        allowDecimals: false,
+                        title: {
+                            text: ""
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: "Anzahl"
+                        }
+                    },
+                    series: [{
+	                    name: 'Name gefüllt',
+                        data: [90, 10],
+                        stack: 'yes'
+                    },
+                    {
+	                    name: 'Name nicht gefüllt',
+                        data: [90, 10],
+                        stack: 'yes'
+                    }]
+                }); 
+            });
+        })
+*/
