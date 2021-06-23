@@ -13,3 +13,30 @@ else alert("Fehler: !!!!!!!!!!!!!!!!!! " + req.statusText);
 req.open("GET", "CRE_Daten.json", true);    
 req.send();
 }
+
+// HighCharts ohne JASON
+document.addEventListener('DOMContentLoaded', function () {
+    const chart = Highcharts.chart('container_1', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }]
+    });
+}); 
