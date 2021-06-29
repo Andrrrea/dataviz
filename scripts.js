@@ -31,7 +31,9 @@ function Verarbeiten(jsonobj)
 
 // JETZT HIER ALLES WAS SICH AUF DIE JSON BEZIEHT -- DIAGRAMME :) 
   var kreditoren = jsonobj.kreditoren;
-  alert((JSON.stringify(kreditoren)));
+  kreditoren = jsonobj.kreditoren;
+  //alert((JSON.stringify(kreditoren)));
+  var data = [];
   for (var i in kreditoren) {
    // kreditoren[i].ID, kreditoren[i].Newsletter 
     var jsondata = {
@@ -39,10 +41,11 @@ function Verarbeiten(jsonobj)
     Anrede: kreditoren[i].Anrede,
     ID: kreditoren[i].ID
     }
-    kreditoren.push(jsondata);
+    data.push(jsondata);
+    //alert(jsondata);
   }
- PieChart(kreditoren);
- console.log(kreditoren);
+ PieChart(data);
+// alert((JSON.stringify(data)));
  // } //end of success function
     function PieChart(series) {
     const chart = Highcharts.chart('container4', {
@@ -57,7 +60,7 @@ function Verarbeiten(jsonobj)
       },
       tooltip: {
         formatter: function() {
-          return '<b>' + this.point.Newsletter + '</b>: ' + this.point.Anrede + ' %';
+          return '<b>' + point.Newsletter + '</b>: ' + point.Anrede + ' %';
         }
       },
       plotOptions: {
@@ -66,7 +69,7 @@ function Verarbeiten(jsonobj)
           cursor: 'pointer',
           dataLabels: {
             enabled: true,
-            format: '<b>{point.Newsletter}</b>: {point.Anrede:.1f} %',
+            format: '<b>{point.ID}</b>: {point.Anrede:.1f} %',
             style: {
               color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
             },
@@ -75,7 +78,7 @@ function Verarbeiten(jsonobj)
         }
       },
       series: [{
-        data: series,
+        data: [1,4,6,9], //hart codiert, hier: data: data
         type: 'pie',
         dataType: 'json',
         animation: false,
