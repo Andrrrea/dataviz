@@ -78,7 +78,7 @@ function Verarbeiten(jsonobj)
         }
       },
       series: [{
-        data: [5,8,1,19], //hart codiert, hier: data: data
+        data: [1,4,6,9], //hart codiert, hier: data: data
         type: 'pie',
         dataType: 'json',
         animation: false,
