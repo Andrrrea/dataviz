@@ -23,57 +23,73 @@ function AJAX_CRE_Daten()
 }
 
 
-
+// result JSON in function for further transformation 
 function Verarbeiten(jsonobj)
-// JETZT HIER ALLES WAS SICH AUF DIE JSON bEZIEHT -- DIAGRAMME :) 
-/* 
 {
-  var kreditoren = jsonobj.kreditoren;
-  console.log("kreditoren");
-  
-  // Abfrage-Tests 
-  var adr1_vorname = kreditoren[0].vorname;
-    alert(adr1_vorname);
-  var adr1_geschlecht = kreditoren[0].Anrede; 
-    alert(adr1_geschlecht)
-  
-  // Ausgabe einiger Daten in eine Tabelle (in tbody) 
-  var ausgabe = document.getElementById("ausgabe"); 
-  
-  var reihen = "";
-  
-  var adr_anz = kreditoren.length; 
-  // aktuell 2 
-    alert(adr_anz); 
-  
-  for(var i = 0; i < adr_anz; i++)
-  {
-      var vorname = kreditoren[i].vorname; 
-      var nachname = kreditoren[i].nachname; 
-      var telefon = kreditoren[i].telefon; 
-      var geschlecht = kreditoren[i].geschlecht; 
-  
-  
-        var reihe = "<tr>"; //Start-Tag tr tabelle 
-        reihe += "<td>" + vorname + "</td>";
-        reihe += "<td>" + nachname + "</td>";
-        reihe += "<td>" + telefon + "</td>";
-        reihe += "<td>" + geschlecht + "</td>";
-        reihe += "</tr>"; 
-        
-        reihen += reihe; 
-    }
-    // Reihen im tbody ausgeben 
-    ausgabe.innerHTML = reihen; 
-    
-    // Stand in h2 ausgeben 
-    var stand = json.stand; 
-    var h2 = document.querySelector("h2");
-    h2.textContent += stand; 
-  
-  } 
- */
+//alert((JSON.stringify(jsonobj.kreditoren)))
+//}
 
+// JETZT HIER ALLES WAS SICH AUF DIE JSON BEZIEHT -- DIAGRAMME :) 
+  var kreditoren = jsonobj.kreditoren;
+  alert((JSON.stringify(kreditoren)));
+  for (var i in kreditoren) {
+   // kreditoren[i].ID, kreditoren[i].Newsletter 
+    var jsondata = {
+    Newsletter: kreditoren[i].Newsletter,
+    Anrede: kreditoren[i].Anrede,
+    ID: kreditoren[i].ID
+    }
+    kreditoren.push(jsondata);
+  }
+ PieChart(kreditoren);
+ console.log(kreditoren);
+ // } //end of success function
+    function PieChart(series) {
+    const chart = Highcharts.chart('container4', {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+      },
+      title: {
+        text: 'TEST Text 1'
+      },
+      tooltip: {
+        formatter: function() {
+          return '<b>' + this.point.Newsletter + '</b>: ' + this.point.Anrede + ' %';
+        }
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: true,
+            format: '<b>{point.Newsletter}</b>: {point.Anrede:.1f} %',
+            style: {
+              color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+            },
+            connectorColor: 'silver'
+          }
+        }
+      },
+      series: [{
+        data: series,
+        type: 'pie',
+        dataType: 'json',
+        animation: false,
+        point: {
+          events: {
+            click: function(event) {
+            }
+          }
+        }
+      }]
+    })
+  }
+}
+ /* 
 // HighCharts ohne JSON
 document.addEventListener('DOMContentLoaded', function () {
     const chart = Highcharts.chart('container_1', {
@@ -99,4 +115,5 @@ document.addEventListener('DOMContentLoaded', function () {
             data: [5, 7, 3]
         }]
     });
-}); 
+})
+ */
