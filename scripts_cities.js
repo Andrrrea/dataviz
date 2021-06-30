@@ -45,9 +45,8 @@ function Verarbeiten(jsonobj)
 
     // Basic Bar Chart
 
-    BarChart(city_data)
-    function BarChart(city_data) {
-    const chart = Highcharts.chart('container5', {
+ 
+   Highcharts.chart('container5', {
       chart: {
           type: 'bar'
       },
@@ -110,8 +109,8 @@ function Verarbeiten(jsonobj)
       }]
   });
 
-    }
-  }
+}
+  
  /* 
 // HighCharts ohne JSON
 document.addEventListener('DOMContentLoaded', function () {
