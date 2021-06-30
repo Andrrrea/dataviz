@@ -1,7 +1,7 @@
 // JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside !FUNKTIONIERT!
 window.onload = AJAX_CRE_Daten;
 
-console.log("Skript funktionier");
+console.log("Skript funktioniert");
 
 function AJAX_CRE_Daten() 
 {
@@ -15,12 +15,12 @@ function AJAX_CRE_Daten()
       {
         var res = req.responseText;
         var jsonobj = JSON.parse(res);
-        if(jsonobj)Verarbeiten(jsonobj);
+        if(jobj)Verarbeiten(jobj);
       }
       else alert("Error" + req.statusText);
     }
   }
-  req.open("GET", "sata_cities.json", true);
+  req.open("GET", "data_cities.json", true);
   req.send();
 }
  
@@ -30,16 +30,14 @@ function Verarbeiten(jsonobj)
 {
   var cities = jsonobj.kreditoren;
  
-  //alert((JSON.stringify(kreditoren)));
   var city_data = [];
   for (var i in cities) {
-   // kreditoren[i].ID, kreditoren[i].Newsletter 
-    var jsondata = {
+    var jdata = {
     Name: cities[i].name,
     Jahr: cities[i].Jahr,
     Einwohnerzahl: cities[i].Einwohnerzahl,
     }
-    data.push(jsondata);
+    data.push(jdata);
     //alert(jsondata);
   }
 
