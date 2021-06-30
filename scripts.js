@@ -47,7 +47,6 @@ function Verarbeiten(jsonobj)
     data.push(jsondata);
     //alert(jsondata);
   }
-  console.log(data);
 
 
  PieChart(data);
@@ -114,7 +113,7 @@ function Verarbeiten(jsonobj)
           text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
       },
       xAxis: {
-          categories: jsondata.Anrede,
+          categories: data.jsondata.Anrede,
           title: {
               text: null
           }
