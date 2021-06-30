@@ -114,7 +114,8 @@ function Verarbeiten(jsonobj)
       },
       xAxis: {
           categories: function() {
-            return jsondata.Anrede},
+            return jsondata.Anrede;
+          },
           title: {
               text: null
           }
