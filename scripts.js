@@ -38,9 +38,10 @@ function Verarbeiten(jsonobj)
 
 // Looping über Objekt
   console.log(kreditoren);
-  for (const key in kreditoren) {
-    if (kreditoren.hasOwnProperty(key)) {
-        console.log(`${key} : ${obj[key]}`);
+  for (const item of kreditoren) {
+    console.log(item);
+    for (var i of item) {
+    console.log(i);
     }
 }
 
