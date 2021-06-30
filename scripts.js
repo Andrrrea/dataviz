@@ -21,7 +21,7 @@ function AJAX_CRE_Daten()
   req.open("GET", "CRE_Daten.json", true);
   req.send();
 }
-
+ 
 
 // result JSON in function for further transformation 
 function Verarbeiten(jsonobj)
