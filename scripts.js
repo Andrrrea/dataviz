@@ -1,6 +1,8 @@
 // JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside !FUNKTIONIERT!
 window.onload = AJAX_CRE_Daten;
 
+console.log("Skript funktionier");
+
 function AJAX_CRE_Daten() 
 {
   var req = new XMLHttpRequest();
@@ -92,7 +94,7 @@ function Verarbeiten(jsonobj)
     })
 
 var names = jsondata.Anrede;
-alert(names);
+console.log(names);
 
     // Basic Bar Chart
     Highcharts.chart('container5', {
