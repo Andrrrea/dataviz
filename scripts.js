@@ -93,7 +93,9 @@ function Verarbeiten(jsonobj)
       }]
     })
 
-console.log(jsondata.Andrede);
+
+
+console.log(jsondata.Andrede[i]);
 
     // Basic Bar Chart
     Highcharts.chart('container5', {
