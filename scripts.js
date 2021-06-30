@@ -39,7 +39,12 @@ function Verarbeiten(jsonobj)
 // Looping über Objekt
   console.log(kreditoren);
   for (const item of kreditoren) {
-      console.log(item.Nr);
+      var nr = item.Nr;
+      var news = item.Newsletter;
+      var rede = item.Anrede;
+      console.log(nr);
+      console.log(news);
+      console.log(rede);
 }
 
 
