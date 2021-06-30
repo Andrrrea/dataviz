@@ -34,10 +34,17 @@ function Verarbeiten(jsonobj)
 // JETZT HIER ALLES WAS SICH AUF DIE JSON BEZIEHT -- DIAGRAMME :) 
   var kreditoren = jsonobj.kreditoren;
   kreditoren = jsonobj.kreditoren;
+
+
+// Looping über Objekt
   console.log(kreditoren);
-  for (const item of kreditoren) {
-    console.log(item);
+  for (const key in kreditoren) {
+    if (kreditoren.hasOwnProperty(key)) {
+        console.log(`${key} : ${obj[key]}`);
+    }
 }
+
+
   //alert((JSON.stringify(kreditoren)));
   var data = [];
   for (var i in kreditoren) {
