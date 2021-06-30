@@ -35,24 +35,6 @@ function Verarbeiten(jsonobj)
   var kreditoren = jsonobj.kreditoren;
   kreditoren = jsonobj.kreditoren;
 
-
-// Looping über Objekt
- /* console.log(kreditoren);
-  for (const item of kreditoren) {
-      var jdata = {
-        nr = item.Nr,
-        news = item.Newsletter,
-        rede = item.Anrede
-      }
-    
-      console.log(jdata);
-      
-      //console.log(nr);
-      //console.log(news);
-      //console.log(rede);
-} */
-
-
   //alert((JSON.stringify(kreditoren)));
   var data = [];
   for (var i in kreditoren) {
@@ -66,7 +48,6 @@ function Verarbeiten(jsonobj)
     //alert(jsondata);
   }
   console.log(data);
-
 
 
  PieChart(data);
@@ -118,6 +99,10 @@ function Verarbeiten(jsonobj)
 
 
     // Basic Bar Chart
+    BarChart(data);
+    alert((JSON.stringify(jsondata.Nr)));
+    // } //end of success function
+    function BArChart(series) {
     Highcharts.chart('container5', {
       chart: {
           type: 'bar'
@@ -129,7 +114,7 @@ function Verarbeiten(jsonobj)
           text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
       },
       xAxis: {
-          categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+          categories: jsondata.Anrede,
           title: {
               text: null
           }
@@ -184,7 +169,7 @@ function Verarbeiten(jsonobj)
       }]
   });
 
-
+    }
 
   }
 }
