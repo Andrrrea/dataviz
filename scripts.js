@@ -104,7 +104,7 @@ function Verarbeiten(jsonobj)
     BarChart(data);
     alert((JSON.stringify(jsondata.Nr)));
     // } //end of success function
-    function BArChart(series) {
+    function BarChart(series) {
     Highcharts.chart('container5', {
       chart: {
           type: 'bar'
