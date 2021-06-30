@@ -44,9 +44,7 @@ function Verarbeiten(jsonobj)
   }
 
     // Basic Bar Chart
-
- 
-   Highcharts.chart('container5', {
+    Highcharts.chart('container5', {
       chart: {
           type: 'bar'
       },
@@ -57,7 +55,7 @@ function Verarbeiten(jsonobj)
           text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
       },
       xAxis: {
-          categories: ['Africa', 'Europe', 'America', 'Asia', 'Atlantic'],
+          categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
           title: {
               text: null
           }
@@ -98,44 +96,18 @@ function Verarbeiten(jsonobj)
           enabled: false
       },
       series: [{
-          name: "Year 2010",
+          name: 'Year 1800',
           data: [107, 31, 635, 203, 2]
       }, {
-          name: "Year 2011",
+          name: 'Year 1900',
           data: [133, 156, 947, 408, 6]
       }, {
-          name: "Year 2012",
+          name: 'Year 2000',
           data: [814, 841, 3714, 727, 31]
+      }, {
+          name: 'Year 2016',
+          data: [1216, 1001, 4436, 738, 40]
       }]
   });
 
-}
-  
- /* 
-// HighCharts ohne JSON
-document.addEventListener('DOMContentLoaded', function () {
-    const chart = Highcharts.chart('container_1', {
-        chart: {
-            type: 'bar'
-        },
-        title: {
-            text: 'Fruit Consumption'
-        },
-        xAxis: {
-            categories: ['Newsletter ja', 'Newsletter nein']
-        },
-        yAxis: {
-            title: {
-                text: 'Fruit eaten'
-            }
-        },
-        series: [{
-            name: 'Frau',
-            data: [1, 0, 4]
-        }, {
-            name: 'Mann',
-            data: [5, 7, 3]
-        }]
-    });
-})
- */
+}           
