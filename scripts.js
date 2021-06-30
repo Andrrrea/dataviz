@@ -34,6 +34,7 @@ function Verarbeiten(jsonobj)
 // JETZT HIER ALLES WAS SICH AUF DIE JSON BEZIEHT -- DIAGRAMME :) 
   var kreditoren = jsonobj.kreditoren;
   kreditoren = jsonobj.kreditoren;
+  console.log(kreditoren);
   //alert((JSON.stringify(kreditoren)));
   var data = [];
   for (var i in kreditoren) {
@@ -47,7 +48,7 @@ function Verarbeiten(jsonobj)
     //alert(jsondata);
   }
 
-console.log(jsondata);
+
 
  PieChart(data);
  alert((JSON.stringify(jsondata.Nr)));
