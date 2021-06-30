@@ -1,4 +1,3 @@
-/*
 
 // JSON für Highcharts einlesen – AJAX Einladen der JSON Datei – clientside !FUNKTIONIERT!
 window.onload = AJAX_CRE_Daten;
@@ -112,4 +111,4 @@ function Verarbeiten(jsonobj)
 
     }
   }
- */
+ 
