@@ -46,6 +46,9 @@ function Verarbeiten(jsonobj)
     data.push(jsondata);
     //alert(jsondata);
   }
+
+console.log(jsondata);
+
  PieChart(data);
  alert((JSON.stringify(jsondata.Nr)));
  // } //end of success function
@@ -93,9 +96,6 @@ function Verarbeiten(jsonobj)
       }]
     })
 
-
-
-console.log(jsondata.Andrede[i]);
 
     // Basic Bar Chart
     Highcharts.chart('container5', {
