@@ -37,7 +37,7 @@ function Verarbeiten(jsonobj)
 
 
 // Looping über Objekt
-  console.log(kreditoren);
+ /* console.log(kreditoren);
   for (const item of kreditoren) {
       var jdata = {
         nr = item.Nr,
@@ -50,7 +50,7 @@ function Verarbeiten(jsonobj)
       //console.log(nr);
       //console.log(news);
       //console.log(rede);
-}
+} */
 
 
   //alert((JSON.stringify(kreditoren)));
@@ -66,6 +66,7 @@ function Verarbeiten(jsonobj)
     //alert(jsondata);
   }
   console.log(data);
+
 
 
  PieChart(data);
