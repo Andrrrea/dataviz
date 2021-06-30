@@ -113,7 +113,8 @@ function Verarbeiten(jsonobj)
           text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
       },
       xAxis: {
-          categories: data.jsondata.Anrede,
+          categories: function() {
+            return jsondata.Anrede},
           title: {
               text: null
           }
