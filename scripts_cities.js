@@ -99,13 +99,13 @@ function Verarbeiten(jsonobj)
           enabled: false
       },
       series: [{
-          name: city_data.Jahr[0],
+          name: "Year 2010",
           data: [107, 31, 635, 203, 2]
       }, {
-          name: city_data.Jahr[1],
+          name: "Year 2011",
           data: [133, 156, 947, 408, 6]
       }, {
-          name: city_data.Jahr[2],
+          name: "Year 2012",
           data: [814, 841, 3714, 727, 31]
       }]
   });
