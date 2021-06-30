@@ -55,8 +55,9 @@ function Verarbeiten(jsonobj)
     var jsondata = {
     Newsletter: kreditoren[i].Newsletter,
     Anrede: kreditoren[i].Anrede,
-    ID: kreditoren[i].Nr
+    ID: kreditoren[i].Nr,
     }
+    console.log(ID);
     data.push(jsondata);
     //alert(jsondata);
   }
