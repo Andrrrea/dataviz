@@ -93,8 +93,7 @@ function Verarbeiten(jsonobj)
       }]
     })
 
-var names = jsondata.Anrede;
-console.log(names);
+console.log(jsondata.Andrede);
 
     // Basic Bar Chart
     Highcharts.chart('container5', {
