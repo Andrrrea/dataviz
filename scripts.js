@@ -35,6 +35,9 @@ function Verarbeiten(jsonobj)
   var kreditoren = jsonobj.kreditoren;
   kreditoren = jsonobj.kreditoren;
   console.log(kreditoren);
+  for (const item of kreditoren) {
+    console.log(item);
+}
   //alert((JSON.stringify(kreditoren)));
   var data = [];
   for (var i in kreditoren) {
