@@ -47,7 +47,7 @@ function Verarbeiten(jsonobj)
 
     BarChart(city_data)
     function BarChart(city_data) {
-    Highcharts.chart('container5', {
+    const chart = Highcharts.chart('container5', {
       chart: {
           type: 'bar'
       },
