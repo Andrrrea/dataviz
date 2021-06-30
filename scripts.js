@@ -101,10 +101,6 @@ function Verarbeiten(jsonobj)
 
     console.log(jsondata.Anrede);
 
-    BarChart(data);
-    alert((JSON.stringify(jsondata.Nr)));
-    // } //end of success function
-    function BarChart(series) {
     Highcharts.chart('container5', {
       chart: {
           type: 'bar'
@@ -172,8 +168,6 @@ function Verarbeiten(jsonobj)
   });
 
     }
-
-  }
 }
  /* 
 // HighCharts ohne JSON
