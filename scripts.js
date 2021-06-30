@@ -98,6 +98,9 @@ function Verarbeiten(jsonobj)
 
 
     // Basic Bar Chart
+
+    console.log(jsondata.Anrede);
+
     BarChart(data);
     alert((JSON.stringify(jsondata.Nr)));
     // } //end of success function
@@ -113,9 +116,7 @@ function Verarbeiten(jsonobj)
           text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
       },
       xAxis: {
-          categories: function() {
-            return jsondata.Anrede;
-          },
+          categories: ['Africa', 'Europe', 'America', 'Asia', 'Atlantic'],
           title: {
               text: null
           }
