@@ -83,7 +83,19 @@ function Verarbeiten(jsonobj)
         }
       },
       series: [{
-        data: [12,1,15,2], //hart codiert, hier: data: data
+        data: [{
+          name: 'Internet Explorer',
+          y: 11.84
+      }, {
+          name: 'Firefox',
+          y: 10.85
+      }, {
+          name: 'Edge',
+          y: 4.67
+      }, {
+          name: 'Safari',
+          y: 4.18
+      }], 
         type: 'pie',
         dataType: 'json',
         animation: false,
@@ -99,31 +111,3 @@ function Verarbeiten(jsonobj)
 
     }
 }
- /* 
-// HighCharts ohne JSON
-document.addEventListener('DOMContentLoaded', function () {
-    const chart = Highcharts.chart('container_1', {
-        chart: {
-            type: 'bar'
-        },
-        title: {
-            text: 'Fruit Consumption'
-        },
-        xAxis: {
-            categories: ['Newsletter ja', 'Newsletter nein']
-        },
-        yAxis: {
-            title: {
-                text: 'Fruit eaten'
-            }
-        },
-        series: [{
-            name: 'Frau',
-            data: [1, 0, 4]
-        }, {
-            name: 'Mann',
-            data: [5, 7, 3]
-        }]
-    });
-})
- */
