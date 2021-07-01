@@ -62,11 +62,11 @@ function Verarbeiten(jsonobj)
         type: 'pie'
       },
       title: {
-        text: 'TEST Text 1'
+        text: 'Vornamen + Hausnummern'
       },
       tooltip: {
         formatter: function() {
-          return '<b>' + "Hey" + '</b>: ' + "ho" + ' %';
+          return '<b>' + kreditoren.Vorname + '</b>: ' + kreditoren.Hausnummer + ' %';
         }
       },
       
