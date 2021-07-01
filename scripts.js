@@ -65,7 +65,7 @@ function Verarbeiten(jsonobj)
       },
       tooltip: {
         formatter: function() {
-          return '<b>' + jsondata.Newsletter + '</b>: ' + jsondata.Nr + ' %';
+          return '<b>' + jsondata[0].Newsletter + '</b>: ' + jsondata[0].Nr + ' %';
         }
       },
       plotOptions: {
