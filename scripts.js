@@ -51,10 +51,9 @@ function Verarbeiten(jsonobj)
 
 
  PieChart(data);
- alert((JSON.stringify(jsondata.Nr)));
+ //alert((JSON.stringify(jsondata.Nr)));
  // } //end of success function
     function PieChart(series) {
-      alert(kreditoren[0].Hausnummer);
     const chart = Highcharts.chart('container4', {
       chart: {
         plotBackgroundColor: null,
@@ -87,20 +86,20 @@ function Verarbeiten(jsonobj)
       },    
       series: [{
         data: [{
-          name: 'Internet Explorer',
+          name: kreditoren[0].Vorname,
           y: kreditoren[0].Hausnummer
       }, {
-          name: 'Firefox',
+          name: kreditoren[1].Vorname,
           y: kreditoren[1].Hausnummer
       }, {
-          name: 'Edge',
+          name: kreditoren[2].Vorname,
           y: kreditoren[2].Hausnummer
       }, {
-          name: 'Safari',
+          name: kreditoren[3].Vorname,
           y: kreditoren[3].Hausnummer
       },
       {
-        name: 'Safari',
+        name: kreditoren[4].Vorname,
         y: kreditoren[4].Hausnummer
     }], 
         type: 'pie',
