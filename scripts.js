@@ -43,6 +43,8 @@ function Verarbeiten(jsonobj)
     Newsletter: kreditoren[i].Newsletter,
     Anrede: kreditoren[i].Anrede,
     ID: kreditoren[i].Nr,
+    name: kreditoren[i].Vorname,
+    hnr: kreditoren[i].Hausnummer
     }
     data.push(jsondata);
     //alert(jsondata);
@@ -85,17 +87,21 @@ function Verarbeiten(jsonobj)
       series: [{
         data: [{
           name: 'Internet Explorer',
-          y: 11.84
+          y: jsondata[0].hnr
       }, {
           name: 'Firefox',
-          y: 10.85
+          y: jsondata[1].hnr
       }, {
           name: 'Edge',
-          y: 4.67
+          y: jsondata[2].hnr
       }, {
           name: 'Safari',
-          y: 4.18
-      }], 
+          y: jsondata[3].hnr
+      },
+      {
+        name: 'Safari',
+        y: jsondata[4].hnr
+    }], 
         type: 'pie',
         dataType: 'json',
         animation: false,
