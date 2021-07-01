@@ -50,7 +50,7 @@ function Verarbeiten(jsonobj)
   }
 
 
- PieChart(data);
+ PieChart(kreditoren);
  alert((JSON.stringify(jsondata.Nr)));
  // } //end of success function
     function PieChart(series) {
