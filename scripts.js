@@ -45,15 +45,16 @@ function Verarbeiten(jsonobj)
     Vorname: kreditoren[i].Vorname,
     Hausnummer: kreditoren[i].Hausnummer
     }
-    kreditoren.push(jsondata);
+    data.push(jsondata);
     //alert(jsondata);
   }
 
 
- PieChart(kreditoren);
+ PieChart(data);
  alert((JSON.stringify(jsondata.Nr)));
  // } //end of success function
     function PieChart(series) {
+      alert(jsondata[0].Hausnummer);
     const chart = Highcharts.chart('container4', {
       chart: {
         plotBackgroundColor: null,
@@ -69,6 +70,7 @@ function Verarbeiten(jsonobj)
           return '<b>' + "Hey" + '</b>: ' + "ho" + ' %';
         }
       },
+      
       plotOptions: {
         pie: {
           allowPointSelect: true,
@@ -82,7 +84,7 @@ function Verarbeiten(jsonobj)
             connectorColor: 'silver'
           }
         }
-      },
+      },    
       series: [{
         data: [{
           name: 'Internet Explorer',
