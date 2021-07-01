@@ -54,7 +54,7 @@ function Verarbeiten(jsonobj)
  alert((JSON.stringify(jsondata.Nr)));
  // } //end of success function
     function PieChart(series) {
-      alert(jsondata[0].Hausnummer);
+      alert(kreditoren[0].Hausnummer);
     const chart = Highcharts.chart('container4', {
       chart: {
         plotBackgroundColor: null,
