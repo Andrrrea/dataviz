@@ -74,7 +74,7 @@ function Verarbeiten(jsonobj)
           cursor: 'pointer',
           dataLabels: {
             enabled: true,
-            format: '<b>{jsondata.ID}</b>: {jsondata.Nr:.1f} %',
+            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
             style: {
               color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
             },
