@@ -88,20 +88,20 @@ function Verarbeiten(jsonobj)
       series: [{
         data: [{
           name: 'Internet Explorer',
-          y: jsondata[0].Hausnummer
+          y: kreditoren[0].Hausnummer
       }, {
           name: 'Firefox',
-          y: jsondata[1].Hausnummer
+          y: kreditoren[1].Hausnummer
       }, {
           name: 'Edge',
-          y: jsondata[2].Hausnummer
+          y: kreditoren[2].Hausnummer
       }, {
           name: 'Safari',
-          y: jsondata[3].Hausnummer
+          y: kreditoren[3].Hausnummer
       },
       {
         name: 'Safari',
-        y: jsondata[4].Hausnummer
+        y: kreditoren[4].Hausnummer
     }], 
         type: 'pie',
         dataType: 'json',
