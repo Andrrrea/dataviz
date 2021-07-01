@@ -65,9 +65,7 @@ function Verarbeiten(jsonobj)
         text: 'Vornamen + Hausnummern'
       },
       tooltip: {
-        formatter: function() {
-          return '<b>' + kreditoren.Vorname + '</b>: ' + kreditoren.Hausnummer + ' %';
-        }
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
       },
       
       plotOptions: {
