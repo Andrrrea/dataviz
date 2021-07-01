@@ -33,7 +33,6 @@ function Verarbeiten(jsonobj)
 
 // JETZT HIER ALLES WAS SICH AUF DIE JSON BEZIEHT -- DIAGRAMME :) 
   var kreditoren = jsonobj.kreditoren;
-  kreditoren = jsonobj.kreditoren;
 
   //alert((JSON.stringify(kreditoren)));
   var data = [];
@@ -46,7 +45,7 @@ function Verarbeiten(jsonobj)
     Vorname: kreditoren[i].Vorname,
     Hausnummer: kreditoren[i].Hausnummer
     }
-    data.push(jsondata);
+    kreditoren.push(jsondata);
     //alert(jsondata);
   }
 
